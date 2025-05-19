@@ -1,0 +1,29 @@
+# Python/Django
+__pycache__/
+*.py[cod]
+*.sqlite3
+db.sqlite3
+.env
+*.env
+*.log
+/static/
+/media/
+.DS_Store
+
+# VSCode
+.vscode/
+
+# Node/React/Vite
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.*
+frontend/.DS_Store
+
+# OS
+Thumbs.db
+
+# Autres
+*.swp
+*.swo
+.idea/ 
