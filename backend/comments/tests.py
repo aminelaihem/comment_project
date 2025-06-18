@@ -4,14 +4,12 @@ from rest_framework import status
 from rest_framework.test import APITestCase
 from .models import Comment
 
-# Create your tests here.
-
 class CommentAPITestCase(APITestCase):
     def test_create_and_list_comment(self):
         url = reverse('comment-list')
         data = {
             'content': 'Super article !',
-            'author': 'Alice',
+            'author': 'Amine',
             'post_id': 1
         }
         # Création du commentaire

@@ -4,8 +4,6 @@ from rest_framework.response import Response
 from .models import Comment
 from .serializers import CommentSerializer
 
-# Create your views here.
-
 class CommentViewSet(viewsets.ModelViewSet):
     serializer_class = CommentSerializer
 
