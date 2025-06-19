@@ -13,11 +13,13 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 import os
 from dotenv import load_dotenv
-# Charger .env.dev automatiquement en local
-load_dotenv(dotenv_path=Path(__file__).resolve().parent.parent / ".env.dev")
-
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Choisir automatiquement le bon fichier .env (dev ou prod)
+ENV = os.environ.get("ENV", "dev")
+dotenv_file = BASE_DIR / f".env.{ENV}"
+load_dotenv(dotenv_file)
 
 # Variables d’environnement
 SECRET_KEY = os.environ.get("SECRET_KEY", "fallback-insecure-key")

@@ -5,7 +5,7 @@ services:
     image: postgres:16
     restart: always
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - comment_postgres_data:/var/lib/postgresql/data
     environment:
       POSTGRES_DB: ${POSTGRES_DB}
       POSTGRES_USER: ${POSTGRES_USER}
@@ -26,4 +26,5 @@ services:
       - db
 
 volumes:
-  postgres_data:
+  comment_postgres_data:
+
